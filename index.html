@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Bing Search</title>
+    <base target="_blank">
+    <script src="script.js"></script>
+</head>
+<body onload="first_load();">
+
+<form  action="/." name="bing" onsubmit="this.offset.value = 0; return bingWebSearch(this.query.value,
+    bingSearchOptions(this), getSubscriptionKey())">
+
+<div id="query"><!-- query controls including search field and options -->
+    <h1>Instagram Bing Search</h2>
+	<input type=hidden name="where"  value="en-US">
+    <input  type="text" name="query" id="term" placeholder="Search the Web" autocomplete=On>
+
+	<input type=hidden name="count" value="1">
+    <input type=hidden name="offset" value="0">
+	<input type="submit" value="Submit">
+</div>
+</form>
+
+ <div  id="error">
+    <h2>Error</h2>
+	<div id="_error"></div>
+</div>
+
+<h2>Results</h2>
+
+<div id="noresults">
+    <div id="_noresults">None yet.</div>
+</div>
+
+
+<div id="mainline">
+    <div id="_mainline"></div>
+</div>
+
+
+
+
+</body>
+</html>
